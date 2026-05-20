@@ -26,12 +26,9 @@ public class UsuarioService {
     public List<Usuario> findAll() {
 
         logger.info("Listando todos los usuarios");
-
         List<Usuario> usuarios = usuarioRepository.findAll();
-
         logger.debug("Cantidad de usuarios encontrados: {}",
                 usuarios.size());
-
         return usuarios;
     }
 
@@ -39,12 +36,9 @@ public class UsuarioService {
     public Usuario findById(Long id) {
 
         logger.info("Buscando usuario con id={}", id);
-
         return usuarioRepository.findById(id)
                 .orElseThrow(() -> {
-
                     logger.warn("Usuario no encontrado id={}", id);
-
                     return new ResourceNotFoundException(
                             "Usuario no encontrado");
                 });
@@ -70,7 +64,6 @@ public class UsuarioService {
     public Usuario update(Long id, Usuario usuarioActualizado) {
 
         logger.info("Actualizando usuario id={}", id);
-
         Usuario usuarioExistente = findById(id);
 
         usuarioExistente.setRun(usuarioActualizado.getRun());
@@ -81,9 +74,7 @@ public class UsuarioService {
 
         Usuario usuarioGuardado =
                 usuarioRepository.save(usuarioExistente);
-
         logger.info("Usuario actualizado exitosamente id={}", id);
-
         return usuarioGuardado;
     }
 
@@ -91,11 +82,8 @@ public class UsuarioService {
     public void delete(Long id) {
 
         logger.info("Eliminando usuario id={}", id);
-
         Usuario usuario = findById(id);
-
         usuarioRepository.delete(usuario);
-
         logger.info("Usuario eliminado exitosamente id={}", id);
     }
 }

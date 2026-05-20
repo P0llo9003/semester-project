@@ -46,7 +46,7 @@ public class UsuarioController {
 
     
     @GetMapping("/{id}")
-    public ResponseEntity<Usuario> buscarUsuario(@PathVariable Long id) {
+    public ResponseEntity<Usuario> buscarPorId(@PathVariable Long id) {
 
         logger.info("GET /usuarios/{}", id);
 
@@ -59,7 +59,7 @@ public class UsuarioController {
 
     
     @PostMapping
-    public ResponseEntity<Usuario> crearUsuario(
+    public ResponseEntity<Usuario> agregar(
             @RequestBody Usuario usuario) {
 
         logger.info("POST /usuarios - correo={}",
@@ -78,7 +78,7 @@ public class UsuarioController {
 
     
     @PutMapping("/{id}")
-    public ResponseEntity<Usuario> actualizarUsuario(
+    public ResponseEntity<Usuario> actualizar(
             @PathVariable Long id,
             @RequestBody Usuario usuario) {
 
@@ -94,7 +94,7 @@ public class UsuarioController {
 
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> eliminarUsuario(
+    public ResponseEntity<Void> eliminar(
             @PathVariable Long id) {
 
         logger.info("DELETE /usuarios/{}", id);
