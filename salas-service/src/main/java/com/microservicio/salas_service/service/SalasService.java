@@ -25,13 +25,11 @@ public class SalasService {
     }
 
 
-    // GET ALL
     public List<Sala> findAll() {
         return salaRepository.findAll();
     }
 
 
-    // GET BY ID
     public Sala findById(Long id) {
 
         return salaRepository.findById(id)
@@ -39,15 +37,14 @@ public class SalasService {
     }
 
 
-    // GET BY TIPO
     public List<Sala> findByTipo(String tipo) {
 
         return salaRepository.findByTipo(tipo);
     }
 
 
-    // GET BY CINE
     public List<Sala> findByCine(Long cineId) {
+
         Boolean existeCine;
 
         try {
@@ -56,11 +53,9 @@ public class SalasService {
                     .retrieve()
                     .bodyToMono(Boolean.class)
                     .block();
-
         } catch (Exception e) {
             throw new RuntimeException("Error al validar cine");
         }
-
         if (Boolean.FALSE.equals(existeCine)) {
             throw new RuntimeException("Cine no encontrado");
         }
@@ -68,7 +63,6 @@ public class SalasService {
     }
 
 
-    // POST
     public Sala save(Sala sala) {
     Boolean existeCine;
     try {
@@ -89,23 +83,21 @@ public class SalasService {
 }
 
 
-    // PUT
     public Sala update(Long id, Sala salaActualizada) {
 
-        Sala salaExistente = findById(id);
+        Sala sala1 = findById(id);
 
-        if (salaExistente != null) {
-            salaExistente.setNombre(salaActualizada.getNombre());
-            salaExistente.setCapacidad(salaActualizada.getCapacidad());
-            salaExistente.setTipo(salaActualizada.getTipo());
-            salaExistente.setCineId(salaActualizada.getCineId());
-            return salaRepository.save(salaExistente);
+        if (sala1 != null) {
+            sala1.setNombre(salaActualizada.getNombre());
+            sala1.setCapacidad(salaActualizada.getCapacidad());
+            sala1.setTipo(salaActualizada.getTipo());
+            sala1.setCineId(salaActualizada.getCineId());
+            return salaRepository.save(sala1);
         }
         return null;
     }
 
 
-    // DELETE
     public void delete(Long id) {
         Sala sala = findById(id);
         if (sala != null) {
@@ -113,4 +105,11 @@ public class SalasService {
         }
     }
 
+
+    public boolean existById(Long id){
+        return salaRepository.existsById(id);
+    }
+
+
+    
 }

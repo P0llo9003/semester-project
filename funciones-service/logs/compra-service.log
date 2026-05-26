@@ -1,0 +1,714 @@
+17:52:23 INFO  Starting FuncionesServiceApplication using Java 21.0.3 with PID 28696 (C:\Users\Usuario\Desktop\semester-project\funciones-service\target\classes started by Usuario in C:\Users\Usuario\Desktop\semester-project\funciones-service)
+17:52:23 INFO  No active profile set, falling back to 1 default profile: "default"
+17:52:23 INFO  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+17:52:23 INFO  For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+17:52:23 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+17:52:24 INFO  Finished Spring Data repository scanning in 77 ms. Found 1 JPA repository interface.
+17:52:24 INFO  Tomcat initialized with port 9095 (http)
+17:52:24 INFO  Starting service [Tomcat]
+17:52:24 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
+17:52:24 INFO  Root WebApplicationContext: initialization completed in 742 ms
+17:52:24 INFO  HikariPool-1 - Starting...
+17:52:24 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7990bcf4
+17:52:24 INFO  HikariPool-1 - Start completed.
+17:52:26 INFO  Creating database changelog table with name: bd_funciones.databasechangelog
+17:52:26 INFO  Reading from bd_funciones.databasechangelog
+17:52:26 INFO  Creating snapshot
+17:52:26 INFO  Name 'PK_DATABASECHANGELOGLOCK' ignored for PRIMARY key.
+17:52:26 INFO  Successfully acquired change log lock
+17:52:26 INFO  Using deploymentId: 9832344482
+17:52:26 INFO  Reading from bd_funciones.databasechangelog
+17:52:26 INFO  Running Changeset: db/changelog/db.changelog.sql::1::seba
+17:52:26 INFO  Custom SQL executed
+17:52:26 INFO  ChangeSet db/changelog/db.changelog.sql::1::seba ran successfully in 11ms
+17:52:26 INFO  Running Changeset: db/changelog/db.changelog.sql::2::seba
+17:52:26 INFO  Custom SQL executed
+17:52:26 INFO  ChangeSet db/changelog/db.changelog.sql::2::seba ran successfully in 6ms
+17:52:26 INFO  UPDATE SUMMARY
+17:52:26 INFO  Run:                          2
+17:52:26 INFO  Previously run:               0
+17:52:26 INFO  Filtered out:                 0
+17:52:26 INFO  -------------------------------
+17:52:26 INFO  Total change sets:            2
+17:52:26 INFO  Update summary generated
+17:52:26 INFO  Update command completed successfully.
+17:52:26 INFO  Liquibase: Update has been successful. Rows affected: 10
+17:52:26 INFO  Successfully released change log lock
+17:52:26 INFO  Command execution complete
+17:52:26 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
+17:52:26 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
+17:52:26 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+17:52:27 WARN  HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+17:52:27 INFO  HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/bd_funciones?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: bd_funciones/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+17:52:27 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+17:52:27 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+17:52:27 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
+17:52:27 WARN  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'funcionController' defined in file [C:\Users\Usuario\Desktop\semester-project\funciones-service\target\classes\com\microservicio\funciones_service\controller\FuncionController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'funcionService': Injection of autowired dependencies failed
+17:52:27 INFO  Closing JPA EntityManagerFactory for persistence unit 'default'
+17:52:27 INFO  HikariPool-1 - Shutdown initiated...
+17:52:27 INFO  HikariPool-1 - Shutdown completed.
+17:52:27 INFO  Stopping service [Tomcat]
+17:52:27 INFO  
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+17:52:27 ERROR Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'funcionController' defined in file [C:\Users\Usuario\Desktop\semester-project\funciones-service\target\classes\com\microservicio\funciones_service\controller\FuncionController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'funcionService': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1382)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1221)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1218)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1184)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at com.microservicio.funciones_service.FuncionesServiceApplication.main(FuncionesServiceApplication.java:13)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'funcionService': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:499)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1446)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:1225)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1704)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1651)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 24 common frames omitted
+Caused by: org.springframework.util.PlaceholderResolutionException: Could not resolve placeholder 'api.pelicula.exists' in value "${api.pelicula.exists}"
+	at org.springframework.util.PlaceholderResolutionException.withValue(PlaceholderResolutionException.java:81)
+	at org.springframework.util.PlaceholderParser$ParsedValue.resolve(PlaceholderParser.java:296)
+	at org.springframework.util.PlaceholderParser.replacePlaceholders(PlaceholderParser.java:129)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:96)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:286)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:257)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:184)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:959)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1672)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1651)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:764)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:748)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:493)
+	... 36 common frames omitted
+17:56:05 INFO  Starting FuncionesServiceApplication using Java 21.0.3 with PID 26280 (C:\Users\Usuario\Desktop\semester-project\funciones-service\target\classes started by Usuario in C:\Users\Usuario\Desktop\semester-project\funciones-service)
+17:56:05 INFO  No active profile set, falling back to 1 default profile: "default"
+17:56:05 INFO  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+17:56:05 INFO  For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+17:56:06 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+17:56:06 INFO  Finished Spring Data repository scanning in 79 ms. Found 1 JPA repository interface.
+17:56:06 INFO  Tomcat initialized with port 9095 (http)
+17:56:06 INFO  Starting service [Tomcat]
+17:56:06 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
+17:56:06 INFO  Root WebApplicationContext: initialization completed in 714 ms
+17:56:06 INFO  HikariPool-1 - Starting...
+17:56:06 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4bf9b3b6
+17:56:06 INFO  HikariPool-1 - Start completed.
+17:56:08 INFO  Reading from bd_funciones.databasechangelog
+17:56:08 INFO  Database is up to date, no changesets to execute
+17:56:08 INFO  Reading from bd_funciones.databasechangelog
+17:56:08 INFO  UPDATE SUMMARY
+17:56:08 INFO  Run:                          0
+17:56:08 INFO  Previously run:               2
+17:56:08 INFO  Filtered out:                 0
+17:56:08 INFO  -------------------------------
+17:56:08 INFO  Total change sets:            2
+17:56:08 INFO  Update summary generated
+17:56:08 INFO  Command execution complete
+17:56:08 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
+17:56:08 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
+17:56:08 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+17:56:08 WARN  HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+17:56:08 INFO  HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/bd_funciones?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: bd_funciones/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+17:56:08 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+17:56:08 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+17:56:09 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
+17:56:09 WARN  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'funcionController' defined in file [C:\Users\Usuario\Desktop\semester-project\funciones-service\target\classes\com\microservicio\funciones_service\controller\FuncionController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'funcionService': Injection of autowired dependencies failed
+17:56:09 INFO  Closing JPA EntityManagerFactory for persistence unit 'default'
+17:56:09 INFO  HikariPool-1 - Shutdown initiated...
+17:56:09 INFO  HikariPool-1 - Shutdown completed.
+17:56:09 INFO  Stopping service [Tomcat]
+17:56:09 INFO  
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+17:56:09 ERROR Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'funcionController' defined in file [C:\Users\Usuario\Desktop\semester-project\funciones-service\target\classes\com\microservicio\funciones_service\controller\FuncionController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'funcionService': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1382)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1221)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1218)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1184)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at com.microservicio.funciones_service.FuncionesServiceApplication.main(FuncionesServiceApplication.java:13)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'funcionService': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:499)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1446)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:1225)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1704)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1651)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 24 common frames omitted
+Caused by: org.springframework.util.PlaceholderResolutionException: Could not resolve placeholder 'api.pelicula.exists' in value "${api.pelicula.exists}"
+	at org.springframework.util.PlaceholderResolutionException.withValue(PlaceholderResolutionException.java:81)
+	at org.springframework.util.PlaceholderParser$ParsedValue.resolve(PlaceholderParser.java:296)
+	at org.springframework.util.PlaceholderParser.replacePlaceholders(PlaceholderParser.java:129)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:96)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:286)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:257)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:184)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:959)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1672)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1651)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:764)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:748)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:493)
+	... 36 common frames omitted
+17:57:53 INFO  Starting FuncionesServiceApplication using Java 21.0.3 with PID 27372 (C:\Users\Usuario\Desktop\semester-project\funciones-service\target\classes started by Usuario in C:\Users\Usuario\Desktop\semester-project\funciones-service)
+17:57:53 INFO  No active profile set, falling back to 1 default profile: "default"
+17:57:53 INFO  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+17:57:53 INFO  For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+17:57:53 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+17:57:53 INFO  Finished Spring Data repository scanning in 74 ms. Found 1 JPA repository interface.
+17:57:53 INFO  Tomcat initialized with port 9095 (http)
+17:57:53 INFO  Starting service [Tomcat]
+17:57:53 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
+17:57:53 INFO  Root WebApplicationContext: initialization completed in 697 ms
+17:57:53 INFO  HikariPool-1 - Starting...
+17:57:53 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@acfca2b
+17:57:53 INFO  HikariPool-1 - Start completed.
+17:57:55 INFO  Reading from bd_funciones.databasechangelog
+17:57:55 INFO  Database is up to date, no changesets to execute
+17:57:55 INFO  Reading from bd_funciones.databasechangelog
+17:57:55 INFO  UPDATE SUMMARY
+17:57:55 INFO  Run:                          0
+17:57:55 INFO  Previously run:               2
+17:57:55 INFO  Filtered out:                 0
+17:57:55 INFO  -------------------------------
+17:57:55 INFO  Total change sets:            2
+17:57:55 INFO  Update summary generated
+17:57:55 INFO  Command execution complete
+17:57:55 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
+17:57:55 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
+17:57:55 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+17:57:56 WARN  HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+17:57:56 INFO  HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/bd_funciones?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: bd_funciones/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+17:57:56 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+17:57:56 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+17:57:56 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
+17:57:56 WARN  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'funcionController' defined in file [C:\Users\Usuario\Desktop\semester-project\funciones-service\target\classes\com\microservicio\funciones_service\controller\FuncionController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'funcionService': Injection of autowired dependencies failed
+17:57:56 INFO  Closing JPA EntityManagerFactory for persistence unit 'default'
+17:57:56 INFO  HikariPool-1 - Shutdown initiated...
+17:57:56 INFO  HikariPool-1 - Shutdown completed.
+17:57:56 INFO  Stopping service [Tomcat]
+17:57:56 INFO  
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+17:57:56 ERROR Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'funcionController' defined in file [C:\Users\Usuario\Desktop\semester-project\funciones-service\target\classes\com\microservicio\funciones_service\controller\FuncionController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'funcionService': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1382)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1221)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1218)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1184)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at com.microservicio.funciones_service.FuncionesServiceApplication.main(FuncionesServiceApplication.java:13)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'funcionService': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:499)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1446)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:1225)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1704)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1651)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 24 common frames omitted
+Caused by: org.springframework.util.PlaceholderResolutionException: Could not resolve placeholder 'api.pelicula.exists' in value "${api.pelicula.exists}"
+	at org.springframework.util.PlaceholderResolutionException.withValue(PlaceholderResolutionException.java:81)
+	at org.springframework.util.PlaceholderParser$ParsedValue.resolve(PlaceholderParser.java:296)
+	at org.springframework.util.PlaceholderParser.replacePlaceholders(PlaceholderParser.java:129)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:96)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:286)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:257)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:184)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:959)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1672)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1651)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:764)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:748)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:493)
+	... 36 common frames omitted
+18:00:09 INFO  Starting FuncionesServiceApplication using Java 21.0.3 with PID 54636 (C:\Users\Usuario\Desktop\semester-project\funciones-service\target\classes started by Usuario in C:\Users\Usuario\Desktop\semester-project\funciones-service)
+18:00:09 INFO  No active profile set, falling back to 1 default profile: "default"
+18:00:09 INFO  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+18:00:09 INFO  For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+18:00:10 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+18:00:10 INFO  Finished Spring Data repository scanning in 76 ms. Found 1 JPA repository interface.
+18:00:10 INFO  Tomcat initialized with port 9095 (http)
+18:00:10 INFO  Starting service [Tomcat]
+18:00:10 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
+18:00:10 INFO  Root WebApplicationContext: initialization completed in 716 ms
+18:00:10 INFO  HikariPool-1 - Starting...
+18:00:10 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@dfd4313
+18:00:10 INFO  HikariPool-1 - Start completed.
+18:00:12 INFO  Reading from bd_funciones.databasechangelog
+18:00:12 INFO  Database is up to date, no changesets to execute
+18:00:12 INFO  Reading from bd_funciones.databasechangelog
+18:00:12 INFO  UPDATE SUMMARY
+18:00:12 INFO  Run:                          0
+18:00:12 INFO  Previously run:               2
+18:00:12 INFO  Filtered out:                 0
+18:00:12 INFO  -------------------------------
+18:00:12 INFO  Total change sets:            2
+18:00:12 INFO  Update summary generated
+18:00:12 INFO  Command execution complete
+18:00:12 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
+18:00:12 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
+18:00:12 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+18:00:12 WARN  HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+18:00:12 INFO  HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/bd_funciones?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: bd_funciones/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+18:00:13 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+18:00:13 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+18:00:13 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
+18:00:13 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+18:00:13 INFO  Tomcat started on port 9095 (http) with context path '/'
+18:00:13 INFO  Started FuncionesServiceApplication in 3.959 seconds (process running for 4.246)
+18:00:19 INFO  Initializing Spring DispatcherServlet 'dispatcherServlet'
+18:00:19 INFO  Initializing Servlet 'dispatcherServlet'
+18:00:19 INFO  Completed initialization in 1 ms
+18:00:19 INFO  GET /funciones
+18:00:19 INFO  Listando todas las funciones
+18:02:01 INFO  GET /funciones/110
+18:02:01 INFO  Buscando funcion por id=110
+18:02:01 WARN  Funcion no encontrada id=110
+18:02:01 WARN  Funcion no encontrada id=110
+18:02:06 INFO  GET /funciones/10
+18:02:06 INFO  Buscando funcion por id=10
+18:02:22 INFO  GET /funciones/pelicula/5
+18:02:22 INFO  Buscando funciones por peliculaId=5
+18:02:40 INFO  GET /funciones/sala/10
+18:02:40 INFO  Buscando funciones por salaId=10
+18:02:54 INFO  GET /funciones/sala/10
+18:02:54 INFO  Buscando funciones por salaId=10
+18:02:58 INFO  GET /funciones/1
+18:02:58 INFO  Buscando funcion por id=1
+18:03:21 INFO  POST /funciones - peliculaId=5, salaId=10
+18:03:21 INFO  Guardando funcion: peliculaId=5, salaId=10
+18:03:21 WARN  Resolved [org.springframework.orm.ObjectOptimisticLockingFailureException: Row was already updated or deleted by another transaction for entity [com.microservicio.funciones_service.model.Funcion with id '11']]
+18:03:45 INFO  POST /funciones - peliculaId=5, salaId=10
+18:03:45 INFO  Guardando funcion: peliculaId=5, salaId=10
+18:03:45 INFO  Funcion guardada correctamente id=11
+18:03:45 INFO  Funcion creada correctamente id=11
+18:03:51 INFO  GET /funciones
+18:03:51 INFO  Listando todas las funciones
+18:03:58 INFO  GET /funciones/11
+18:03:58 INFO  Buscando funcion por id=11
+18:04:22 INFO  PUT /funciones/11
+18:04:22 INFO  Actualizando funcion id=11
+18:04:22 INFO  Funcion actualizada correctamente id=11
+18:04:22 INFO  Funcion actualizada correctamente id=11
+18:04:25 INFO  GET /funciones/11
+18:04:25 INFO  Buscando funcion por id=11
+18:04:30 INFO  GET /funciones
+18:04:30 INFO  Listando todas las funciones
+18:04:38 INFO  GET /funciones/pelicula/10
+18:04:38 INFO  Buscando funciones por peliculaId=10
+18:04:48 INFO  DELETE /funciones/11
+18:04:48 INFO  Buscando funcion por id=11
+18:04:48 INFO  Eliminando funcion id=11
+18:04:48 INFO  Funcion eliminada correctamente id=11
+18:04:48 INFO  Funcion eliminada correctamente id=11
+18:04:54 INFO  GET /funciones/11
+18:04:54 INFO  Buscando funcion por id=11
+18:04:54 WARN  Funcion no encontrada id=11
+18:04:54 WARN  Funcion no encontrada id=11
+18:04:58 INFO  GET /funciones
+18:04:58 INFO  Listando todas las funciones
+18:56:01 INFO  Starting FuncionesServiceApplication using Java 21.0.3 with PID 16336 (C:\Users\Usuario\Desktop\semester-project\funciones-service\target\classes started by Usuario in C:\Users\Usuario\Desktop\semester-project\funciones-service)
+18:56:01 INFO  No active profile set, falling back to 1 default profile: "default"
+18:56:01 INFO  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+18:56:01 INFO  For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+18:56:02 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+18:56:02 INFO  Finished Spring Data repository scanning in 77 ms. Found 2 JPA repository interfaces.
+18:56:02 INFO  Tomcat initialized with port 9095 (http)
+18:56:02 INFO  Starting service [Tomcat]
+18:56:02 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
+18:56:02 INFO  Root WebApplicationContext: initialization completed in 719 ms
+18:56:02 INFO  HikariPool-1 - Starting...
+18:56:03 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7232de1c
+18:56:03 INFO  HikariPool-1 - Start completed.
+18:56:04 INFO  Creating database changelog table with name: bd_funciones.databasechangelog
+18:56:04 INFO  Reading from bd_funciones.databasechangelog
+18:56:04 INFO  Creating snapshot
+18:56:04 INFO  Name 'PK_DATABASECHANGELOGLOCK' ignored for PRIMARY key.
+18:56:04 INFO  Successfully acquired change log lock
+18:56:04 INFO  Using deploymentId: 9836162681
+18:56:04 INFO  Reading from bd_funciones.databasechangelog
+18:56:04 INFO  Running Changeset: db/changelog/db.changelog.sql::1::seba
+18:56:04 INFO  Custom SQL executed
+18:56:04 INFO  ChangeSet db/changelog/db.changelog.sql::1::seba ran successfully in 11ms
+18:56:04 INFO  Running Changeset: db/changelog/db.changelog.sql::2::seba
+18:56:04 INFO  Custom SQL executed
+18:56:04 INFO  ChangeSet db/changelog/db.changelog.sql::2::seba ran successfully in 5ms
+18:56:04 INFO  Running Changeset: db/changelog/db.changelog.sql::3::seba
+18:56:04 INFO  Custom SQL executed
+18:56:04 INFO  ChangeSet db/changelog/db.changelog.sql::3::seba ran successfully in 5ms
+18:56:04 INFO  Running Changeset: db/changelog/db.changelog.sql::4::seba
+18:56:04 INFO  Custom SQL executed
+18:56:04 INFO  ChangeSet db/changelog/db.changelog.sql::4::seba ran successfully in 3ms
+18:56:04 INFO  UPDATE SUMMARY
+18:56:04 INFO  Run:                          4
+18:56:04 INFO  Previously run:               0
+18:56:04 INFO  Filtered out:                 0
+18:56:04 INFO  -------------------------------
+18:56:04 INFO  Total change sets:            4
+18:56:04 INFO  Update summary generated
+18:56:04 INFO  Update command completed successfully.
+18:56:04 INFO  Liquibase: Update has been successful. Rows affected: 20
+18:56:04 INFO  Successfully released change log lock
+18:56:04 INFO  Command execution complete
+18:56:04 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
+18:56:04 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
+18:56:05 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+18:56:05 WARN  HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+18:56:05 INFO  HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/bd_funciones?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: bd_funciones/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+18:56:05 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+18:56:05 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+18:56:05 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
+18:56:05 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+18:56:06 INFO  Tomcat started on port 9095 (http) with context path '/'
+18:56:06 INFO  Started FuncionesServiceApplication in 4.519 seconds (process running for 4.809)
+19:01:15 INFO  Starting FuncionesServiceApplication using Java 21.0.3 with PID 9296 (C:\Users\Usuario\Desktop\semester-project\funciones-service\target\classes started by Usuario in C:\Users\Usuario\Desktop\semester-project\funciones-service)
+19:01:15 INFO  No active profile set, falling back to 1 default profile: "default"
+19:01:15 INFO  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+19:01:15 INFO  For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+19:01:15 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+19:01:15 INFO  Finished Spring Data repository scanning in 79 ms. Found 2 JPA repository interfaces.
+19:01:16 INFO  Tomcat initialized with port 9095 (http)
+19:01:16 INFO  Starting service [Tomcat]
+19:01:16 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
+19:01:16 INFO  Root WebApplicationContext: initialization completed in 704 ms
+19:01:16 INFO  HikariPool-1 - Starting...
+19:01:16 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6c391850
+19:01:16 INFO  HikariPool-1 - Start completed.
+19:01:17 INFO  Reading from bd_funciones.databasechangelog
+19:01:17 INFO  Database is up to date, no changesets to execute
+19:01:17 INFO  Reading from bd_funciones.databasechangelog
+19:01:17 INFO  UPDATE SUMMARY
+19:01:17 INFO  Run:                          0
+19:01:17 INFO  Previously run:               4
+19:01:17 INFO  Filtered out:                 0
+19:01:17 INFO  -------------------------------
+19:01:17 INFO  Total change sets:            4
+19:01:17 INFO  Update summary generated
+19:01:17 INFO  Command execution complete
+19:01:17 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
+19:01:17 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
+19:01:17 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+19:01:17 WARN  HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+19:01:17 INFO  HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/bd_funciones?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: bd_funciones/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+19:01:18 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+19:01:18 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+19:01:18 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
+19:01:18 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+19:01:18 INFO  Tomcat started on port 9095 (http) with context path '/'
+19:01:18 INFO  Started FuncionesServiceApplication in 3.689 seconds (process running for 3.973)
+19:05:32 INFO  Starting FuncionesServiceApplication using Java 21.0.3 with PID 53608 (C:\Users\Usuario\Desktop\semester-project\funciones-service\target\classes started by Usuario in C:\Users\Usuario\Desktop\semester-project\funciones-service)
+19:05:32 INFO  No active profile set, falling back to 1 default profile: "default"
+19:05:32 INFO  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+19:05:32 INFO  For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+19:05:33 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+19:05:33 INFO  Finished Spring Data repository scanning in 74 ms. Found 2 JPA repository interfaces.
+19:05:33 INFO  Tomcat initialized with port 9095 (http)
+19:05:33 INFO  Starting service [Tomcat]
+19:05:33 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
+19:05:33 INFO  Root WebApplicationContext: initialization completed in 710 ms
+19:05:33 INFO  HikariPool-1 - Starting...
+19:05:33 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@b383a54
+19:05:33 INFO  HikariPool-1 - Start completed.
+19:05:35 INFO  Reading from bd_funciones.databasechangelog
+19:05:35 INFO  Database is up to date, no changesets to execute
+19:05:35 INFO  Reading from bd_funciones.databasechangelog
+19:05:35 INFO  UPDATE SUMMARY
+19:05:35 INFO  Run:                          0
+19:05:35 INFO  Previously run:               4
+19:05:35 INFO  Filtered out:                 0
+19:05:35 INFO  -------------------------------
+19:05:35 INFO  Total change sets:            4
+19:05:35 INFO  Update summary generated
+19:05:35 INFO  Command execution complete
+19:05:35 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
+19:05:35 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
+19:05:35 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+19:05:35 WARN  HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+19:05:35 INFO  HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/bd_funciones?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: bd_funciones/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+19:05:35 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+19:05:35 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+19:05:35 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
+19:05:36 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+19:05:36 INFO  Tomcat started on port 9095 (http) with context path '/'
+19:05:36 INFO  Started FuncionesServiceApplication in 3.676 seconds (process running for 3.966)
+19:06:24 INFO  Initializing Spring DispatcherServlet 'dispatcherServlet'
+19:06:24 INFO  Initializing Servlet 'dispatcherServlet'
+19:06:24 INFO  Completed initialization in 1 ms
+19:06:24 INFO  GET /funciones
+19:06:24 INFO  Listando todas las funciones
+19:06:27 INFO  GET /entradas
+19:06:27 INFO  Listando todas las entradas
+19:06:35 INFO  GET /entradas/1
+19:06:35 INFO  Buscando entrada por id=1
+19:06:38 INFO  GET /entradas/5
+19:06:38 INFO  Buscando entrada por id=5
+19:06:40 INFO  GET /entradas/10
+19:06:40 INFO  Buscando entrada por id=10
+19:07:11 WARN  Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+19:07:19 INFO  POST /entradas - funcionId=20, usuarioId=15
+19:07:19 INFO  Guardando entrada: funcionId=20, usuarioId=15
+19:07:19 INFO  GET /funciones/20/exists
+19:07:19 INFO  Verificando existencia de funcion id=20
+19:07:19 WARN  Usuario no encontrado id=15
+19:07:19 WARN  Resolved [java.lang.RuntimeException: Usuario no encontrado]
+19:07:26 INFO  POST /entradas - funcionId=20, usuarioId=1
+19:07:26 INFO  Guardando entrada: funcionId=20, usuarioId=1
+19:07:26 INFO  GET /funciones/20/exists
+19:07:26 INFO  Verificando existencia de funcion id=20
+19:07:26 WARN  Funcion no encontrada id=20
+19:07:26 WARN  Resolved [java.lang.RuntimeException: Funcion no encontrada]
+19:07:33 INFO  POST /entradas - funcionId=10, usuarioId=1
+19:07:33 INFO  Guardando entrada: funcionId=10, usuarioId=1
+19:07:33 INFO  GET /funciones/10/exists
+19:07:33 INFO  Verificando existencia de funcion id=10
+19:07:33 INFO  Entrada guardada correctamente id=11
+19:07:33 INFO  Entrada creada correctamente id=11
+19:07:40 INFO  GET /entradas
+19:07:40 INFO  Listando todas las entradas
+19:10:19 INFO  PUT /entradas/111
+19:10:19 INFO  Actualizando entrada id=111
+19:10:19 WARN  Entrada no encontrada id=111
+19:10:19 WARN  No se pudo actualizar entrada id=111
+19:10:23 INFO  GET /entradas/111
+19:10:23 INFO  Buscando entrada por id=111
+19:10:23 WARN  Entrada no encontrada id=111
+19:10:23 WARN  Entrada no encontrada id=111
+19:10:28 WARN  Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+19:10:35 INFO  PUT /entradas/111
+19:10:35 INFO  Actualizando entrada id=111
+19:10:35 WARN  Entrada no encontrada id=111
+19:10:35 WARN  No se pudo actualizar entrada id=111
+19:10:43 INFO  GET /entradas/11
+19:10:43 INFO  Buscando entrada por id=11
+19:10:55 INFO  PUT /entradas/11
+19:10:55 INFO  Actualizando entrada id=11
+19:10:55 INFO  GET /funciones/10/exists
+19:10:55 INFO  Verificando existencia de funcion id=10
+19:10:55 INFO  Entrada actualizada correctamente id=11
+19:10:55 INFO  Entrada actualizada correctamente id=11
+19:10:58 INFO  GET /entradas/11
+19:10:58 INFO  Buscando entrada por id=11
+19:11:03 INFO  GET /entradas
+19:11:03 INFO  Listando todas las entradas
+19:11:08 WARN  Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' is not supported]
+19:11:12 INFO  DELETE /entradas/11
+19:11:12 INFO  Buscando entrada por id=11
+19:11:12 INFO  Eliminando entrada id=11
+19:11:12 INFO  Entrada eliminada correctamente id=11
+19:11:12 INFO  Entrada eliminada correctamente id=11
+19:11:15 INFO  GET /entradas/11
+19:11:15 INFO  Buscando entrada por id=11
+19:11:15 WARN  Entrada no encontrada id=11
+19:11:15 WARN  Entrada no encontrada id=11
+19:11:20 INFO  GET /entradas
+19:11:20 INFO  Listando todas las entradas
+19:11:27 INFO  Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+19:11:27 INFO  Commencing graceful shutdown. Waiting for active requests to complete
+19:11:27 INFO  Graceful shutdown complete
+19:11:27 INFO  Closing JPA EntityManagerFactory for persistence unit 'default'
+19:11:27 INFO  HikariPool-1 - Shutdown initiated...
+19:11:27 INFO  HikariPool-1 - Shutdown completed.
+19:11:27 INFO  Starting FuncionesServiceApplication using Java 21.0.3 with PID 53608 (C:\Users\Usuario\Desktop\semester-project\funciones-service\target\classes started by Usuario in C:\Users\Usuario\Desktop\semester-project\funciones-service)
+19:11:27 INFO  No active profile set, falling back to 1 default profile: "default"
+19:11:28 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+19:11:28 INFO  Finished Spring Data repository scanning in 6 ms. Found 2 JPA repository interfaces.
+19:11:28 INFO  Tomcat initialized with port 9095 (http)
+19:11:28 INFO  Starting service [Tomcat]
+19:11:28 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
+19:11:28 INFO  Root WebApplicationContext: initialization completed in 155 ms
+19:11:28 INFO  HikariPool-2 - Starting...
+19:11:28 INFO  HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7913a72f
+19:11:28 INFO  HikariPool-2 - Start completed.
+19:11:28 INFO  Reading from bd_funciones.databasechangelog
+19:11:28 INFO  Database is up to date, no changesets to execute
+19:11:28 INFO  Reading from bd_funciones.databasechangelog
+19:11:28 INFO  UPDATE SUMMARY
+19:11:28 INFO  Run:                          0
+19:11:28 INFO  Previously run:               4
+19:11:28 INFO  Filtered out:                 0
+19:11:28 INFO  -------------------------------
+19:11:28 INFO  Total change sets:            4
+19:11:28 INFO  Update summary generated
+19:11:28 INFO  Command execution complete
+19:11:28 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
+19:11:28 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+19:11:28 WARN  HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+19:11:28 INFO  HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/bd_funciones?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: bd_funciones/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+19:11:28 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+19:11:28 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+19:11:28 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+19:11:28 INFO  Tomcat started on port 9095 (http) with context path '/'
+19:11:28 INFO  Started FuncionesServiceApplication in 0.409 seconds (process running for 356.024)
+19:11:28 INFO  Condition evaluation unchanged

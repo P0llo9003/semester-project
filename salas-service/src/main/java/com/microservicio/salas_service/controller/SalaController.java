@@ -113,4 +113,11 @@ public class SalaController {
         return ResponseEntity.notFound().build();
     }
 
+
+    @GetMapping("/{id}/exists")
+    public ResponseEntity<Boolean> existeSala(@PathVariable Long id) {
+        return ResponseEntity.ok(salasService.existById(id));
+    }
+
+    
 }

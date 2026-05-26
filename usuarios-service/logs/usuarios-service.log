@@ -103,3 +103,274 @@
 15:40:30 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 15:40:31 INFO  Tomcat started on port 9091 (http) with context path '/'
 15:40:31 INFO  Started UsuariosServiceApplication in 3.786 seconds (process running for 4.039)
+17:52:38 INFO  Starting UsuariosServiceApplication using Java 21.0.3 with PID 23296 (C:\Users\Usuario\Desktop\semester-project\usuarios-service\target\classes started by Usuario in C:\Users\Usuario\Desktop\semester-project\usuarios-service)
+17:52:38 INFO  No active profile set, falling back to 1 default profile: "default"
+17:52:38 INFO  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+17:52:38 INFO  For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+17:52:39 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+17:52:39 INFO  Finished Spring Data repository scanning in 24 ms. Found 1 JPA repository interface.
+17:52:39 INFO  Tomcat initialized with port 9091 (http)
+17:52:39 INFO  Starting service [Tomcat]
+17:52:39 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
+17:52:39 INFO  Root WebApplicationContext: initialization completed in 644 ms
+17:52:39 INFO  HikariPool-1 - Starting...
+17:52:39 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@74e839c5
+17:52:39 INFO  HikariPool-1 - Start completed.
+17:52:41 INFO  Creating database changelog table with name: bd_usuarios.databasechangelog
+17:52:41 INFO  Reading from bd_usuarios.databasechangelog
+17:52:41 INFO  Creating snapshot
+17:52:41 INFO  Name 'PK_DATABASECHANGELOGLOCK' ignored for PRIMARY key.
+17:52:41 INFO  Successfully acquired change log lock
+17:52:41 INFO  Using deploymentId: 9832359499
+17:52:41 INFO  Reading from bd_usuarios.databasechangelog
+17:52:41 INFO  Running Changeset: db/changelog/db.changelog.sql::1::seba
+17:52:41 INFO  Custom SQL executed
+17:52:41 INFO  ChangeSet db/changelog/db.changelog.sql::1::seba ran successfully in 9ms
+17:52:41 INFO  Running Changeset: db/changelog/db.changelog.sql::2::seba
+17:52:41 INFO  Custom SQL executed
+17:52:41 INFO  ChangeSet db/changelog/db.changelog.sql::2::seba ran successfully in 5ms
+17:52:41 INFO  UPDATE SUMMARY
+17:52:41 INFO  Run:                          2
+17:52:41 INFO  Previously run:               0
+17:52:41 INFO  Filtered out:                 0
+17:52:41 INFO  -------------------------------
+17:52:41 INFO  Total change sets:            2
+17:52:41 INFO  Update summary generated
+17:52:41 INFO  Update command completed successfully.
+17:52:41 INFO  Liquibase: Update has been successful. Rows affected: 10
+17:52:41 INFO  Successfully released change log lock
+17:52:41 INFO  Command execution complete
+17:52:41 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
+17:52:41 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
+17:52:41 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+17:52:41 WARN  HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+17:52:41 INFO  HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/bd_usuarios?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: bd_usuarios/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+17:52:42 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+17:52:42 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+17:52:42 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
+17:52:42 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+17:52:42 INFO  Tomcat started on port 9091 (http) with context path '/'
+17:52:42 INFO  Started UsuariosServiceApplication in 4.069 seconds (process running for 4.33)
+17:55:46 INFO  Starting UsuariosServiceApplication using Java 21.0.3 with PID 45196 (C:\Users\Usuario\Desktop\semester-project\usuarios-service\target\classes started by Usuario in C:\Users\Usuario\Desktop\semester-project\usuarios-service)
+17:55:46 INFO  No active profile set, falling back to 1 default profile: "default"
+17:55:46 INFO  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+17:55:46 INFO  For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+17:55:46 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+17:55:47 INFO  Finished Spring Data repository scanning in 24 ms. Found 1 JPA repository interface.
+17:55:47 INFO  Tomcat initialized with port 9091 (http)
+17:55:47 INFO  Starting service [Tomcat]
+17:55:47 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
+17:55:47 INFO  Root WebApplicationContext: initialization completed in 643 ms
+17:55:47 INFO  HikariPool-1 - Starting...
+17:55:47 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@59efd5bf
+17:55:47 INFO  HikariPool-1 - Start completed.
+17:55:48 INFO  Reading from bd_usuarios.databasechangelog
+17:55:48 INFO  Database is up to date, no changesets to execute
+17:55:48 INFO  Reading from bd_usuarios.databasechangelog
+17:55:48 INFO  UPDATE SUMMARY
+17:55:48 INFO  Run:                          0
+17:55:48 INFO  Previously run:               2
+17:55:48 INFO  Filtered out:                 0
+17:55:48 INFO  -------------------------------
+17:55:48 INFO  Total change sets:            2
+17:55:48 INFO  Update summary generated
+17:55:48 INFO  Command execution complete
+17:55:48 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
+17:55:48 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
+17:55:49 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+17:55:49 WARN  HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+17:55:49 INFO  HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/bd_usuarios?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: bd_usuarios/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+17:55:49 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+17:55:49 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+17:55:49 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
+17:55:49 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+17:55:49 INFO  Tomcat started on port 9091 (http) with context path '/'
+17:55:49 INFO  Started UsuariosServiceApplication in 3.405 seconds (process running for 3.662)
+17:56:28 INFO  Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:56:28 INFO  Initializing Servlet 'dispatcherServlet'
+17:56:28 INFO  Completed initialization in 1 ms
+17:56:28 INFO  GET /usuarios
+17:56:28 INFO  Listando todos los usuarios
+18:55:53 INFO  Starting UsuariosServiceApplication using Java 21.0.3 with PID 18948 (C:\Users\Usuario\Desktop\semester-project\usuarios-service\target\classes started by Usuario in C:\Users\Usuario\Desktop\semester-project\usuarios-service)
+18:55:53 INFO  No active profile set, falling back to 1 default profile: "default"
+18:55:53 INFO  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+18:55:53 INFO  For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+18:55:54 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+18:55:54 INFO  Finished Spring Data repository scanning in 22 ms. Found 1 JPA repository interface.
+18:55:54 INFO  Tomcat initialized with port 9091 (http)
+18:55:54 INFO  Starting service [Tomcat]
+18:55:54 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
+18:55:54 INFO  Root WebApplicationContext: initialization completed in 631 ms
+18:55:54 INFO  HikariPool-1 - Starting...
+18:55:54 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@f4731a2
+18:55:54 INFO  HikariPool-1 - Start completed.
+18:55:56 INFO  Creating database changelog table with name: bd_usuarios.databasechangelog
+18:55:56 INFO  Reading from bd_usuarios.databasechangelog
+18:55:56 INFO  Creating snapshot
+18:55:56 INFO  Name 'PK_DATABASECHANGELOGLOCK' ignored for PRIMARY key.
+18:55:56 INFO  Successfully acquired change log lock
+18:55:56 INFO  Using deploymentId: 9836154546
+18:55:56 INFO  Reading from bd_usuarios.databasechangelog
+18:55:56 INFO  Running Changeset: db/changelog/db.changelog.sql::1::seba
+18:55:56 INFO  Custom SQL executed
+18:55:56 INFO  ChangeSet db/changelog/db.changelog.sql::1::seba ran successfully in 9ms
+18:55:56 INFO  Running Changeset: db/changelog/db.changelog.sql::2::seba
+18:55:56 INFO  Custom SQL executed
+18:55:56 INFO  ChangeSet db/changelog/db.changelog.sql::2::seba ran successfully in 4ms
+18:55:56 INFO  UPDATE SUMMARY
+18:55:56 INFO  Run:                          2
+18:55:56 INFO  Previously run:               0
+18:55:56 INFO  Filtered out:                 0
+18:55:56 INFO  -------------------------------
+18:55:56 INFO  Total change sets:            2
+18:55:56 INFO  Update summary generated
+18:55:56 INFO  Update command completed successfully.
+18:55:56 INFO  Liquibase: Update has been successful. Rows affected: 10
+18:55:56 INFO  Successfully released change log lock
+18:55:56 INFO  Command execution complete
+18:55:56 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
+18:55:56 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
+18:55:57 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+18:55:57 WARN  HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+18:55:57 INFO  HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/bd_usuarios?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: bd_usuarios/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+18:55:57 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+18:55:57 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+18:55:57 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
+18:55:57 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+18:55:57 INFO  Tomcat started on port 9091 (http) with context path '/'
+18:55:57 INFO  Started UsuariosServiceApplication in 4.257 seconds (process running for 4.524)
+19:01:07 INFO  Starting UsuariosServiceApplication using Java 21.0.3 with PID 32340 (C:\Users\Usuario\Desktop\semester-project\usuarios-service\target\classes started by Usuario in C:\Users\Usuario\Desktop\semester-project\usuarios-service)
+19:01:07 INFO  No active profile set, falling back to 1 default profile: "default"
+19:01:07 INFO  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+19:01:07 INFO  For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+19:01:07 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+19:01:07 INFO  Finished Spring Data repository scanning in 27 ms. Found 1 JPA repository interface.
+19:01:08 INFO  Tomcat initialized with port 9091 (http)
+19:01:08 INFO  Starting service [Tomcat]
+19:01:08 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
+19:01:08 INFO  Root WebApplicationContext: initialization completed in 622 ms
+19:01:08 INFO  HikariPool-1 - Starting...
+19:01:08 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1ab5717f
+19:01:08 INFO  HikariPool-1 - Start completed.
+19:01:09 INFO  Reading from bd_usuarios.databasechangelog
+19:01:09 INFO  Database is up to date, no changesets to execute
+19:01:09 INFO  Reading from bd_usuarios.databasechangelog
+19:01:09 INFO  UPDATE SUMMARY
+19:01:09 INFO  Run:                          0
+19:01:09 INFO  Previously run:               2
+19:01:09 INFO  Filtered out:                 0
+19:01:09 INFO  -------------------------------
+19:01:09 INFO  Total change sets:            2
+19:01:09 INFO  Update summary generated
+19:01:09 INFO  Command execution complete
+19:01:09 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
+19:01:09 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
+19:01:09 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+19:01:09 WARN  HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+19:01:09 INFO  HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/bd_usuarios?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: bd_usuarios/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+19:01:10 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+19:01:10 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+19:01:10 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
+19:01:10 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+19:01:10 INFO  Tomcat started on port 9091 (http) with context path '/'
+19:01:10 INFO  Started UsuariosServiceApplication in 3.388 seconds (process running for 3.643)
+19:02:51 INFO  Initializing Spring DispatcherServlet 'dispatcherServlet'
+19:02:51 INFO  Initializing Servlet 'dispatcherServlet'
+19:02:51 INFO  Completed initialization in 0 ms
+19:02:51 INFO  GET /usuarios
+19:02:51 INFO  Listando todos los usuarios
+19:05:29 INFO  Starting UsuariosServiceApplication using Java 21.0.3 with PID 53072 (C:\Users\Usuario\Desktop\semester-project\usuarios-service\target\classes started by Usuario in C:\Users\Usuario\Desktop\semester-project\usuarios-service)
+19:05:29 INFO  No active profile set, falling back to 1 default profile: "default"
+19:05:29 INFO  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+19:05:29 INFO  For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+19:05:29 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+19:05:29 INFO  Finished Spring Data repository scanning in 27 ms. Found 1 JPA repository interface.
+19:05:29 INFO  Tomcat initialized with port 9091 (http)
+19:05:29 INFO  Starting service [Tomcat]
+19:05:29 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
+19:05:29 INFO  Root WebApplicationContext: initialization completed in 600 ms
+19:05:29 INFO  HikariPool-1 - Starting...
+19:05:29 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@bacb51f
+19:05:29 INFO  HikariPool-1 - Start completed.
+19:05:31 INFO  Reading from bd_usuarios.databasechangelog
+19:05:31 INFO  Database is up to date, no changesets to execute
+19:05:31 INFO  Reading from bd_usuarios.databasechangelog
+19:05:31 INFO  UPDATE SUMMARY
+19:05:31 INFO  Run:                          0
+19:05:31 INFO  Previously run:               2
+19:05:31 INFO  Filtered out:                 0
+19:05:31 INFO  -------------------------------
+19:05:31 INFO  Total change sets:            2
+19:05:31 INFO  Update summary generated
+19:05:31 INFO  Command execution complete
+19:05:31 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
+19:05:31 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
+19:05:31 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+19:05:31 WARN  HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+19:05:31 INFO  HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/bd_usuarios?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: bd_usuarios/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+19:05:32 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+19:05:32 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+19:05:32 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
+19:05:32 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+19:05:32 INFO  Tomcat started on port 9091 (http) with context path '/'
+19:05:32 INFO  Started UsuariosServiceApplication in 3.559 seconds (process running for 3.828)
+19:06:19 INFO  Initializing Spring DispatcherServlet 'dispatcherServlet'
+19:06:19 INFO  Initializing Servlet 'dispatcherServlet'
+19:06:19 INFO  Completed initialization in 1 ms
+19:06:19 INFO  GET /usuarios
+19:06:19 INFO  Listando todos los usuarios

@@ -28,3 +28,8 @@ spring:
             uri: http://localhost:9094
             predicates:
             - Path=/salas/**
+
+          - id: funciones-service
+            uri: http://localhost:9095
+            predicates:
+            - Path=/funciones/**,/entradas/**

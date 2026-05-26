@@ -105,4 +105,10 @@ public class UsuarioController {
 
         return ResponseEntity.noContent().build();
     }
+
+
+    @GetMapping("/{id}/exists")
+	public ResponseEntity<Boolean> existeUsuario(@PathVariable Long id) {
+		return ResponseEntity.ok(usuarioService.existePorId(id));
+	}
 }

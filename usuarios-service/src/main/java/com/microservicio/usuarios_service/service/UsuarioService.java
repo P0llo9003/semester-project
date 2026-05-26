@@ -86,4 +86,10 @@ public class UsuarioService {
         usuarioRepository.delete(usuario);
         logger.info("Usuario eliminado exitosamente id={}", id);
     }
+
+
+    public boolean existePorId(Long id) {
+		return usuarioRepository.existsById(id);
+	}
+
 }
