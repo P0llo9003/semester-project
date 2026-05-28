@@ -7,5 +7,7 @@ import com.microservicio.cines_service.model.Cine;
 
 @Repository
 public interface CineRepository extends JpaRepository<Cine, Long>{
+
+    Cine findByTelefono(int telefono); 
     
 }

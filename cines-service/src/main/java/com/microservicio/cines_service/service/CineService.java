@@ -28,6 +28,10 @@ public class CineService {
         return cineRepository.findById(id).orElse(null);
     }
 
+    public Cine findByTelefono(int telefono) {
+        return cineRepository.findByTelefono(telefono);
+    }
+
     public Cine update(Long id, Cine updatedCine) {
 
         Cine cine1 = cineRepository.findById(id).orElse(null);

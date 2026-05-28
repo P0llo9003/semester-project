@@ -46,6 +46,16 @@ public class CineController {
         return ResponseEntity.ok(cine);
     }
 
+    @GetMapping("/telefono/{telefono}")
+    public ResponseEntity<Cine> findByTelefono(@PathVariable int telefono) {
+        Cine cine = cineService.findByTelefono(telefono);
+
+        if(cine == null){
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(cine);
+    }
+
 
 	@PostMapping
 	public ResponseEntity<CineDTO> crearCine(@RequestBody CineDTO CineDto) {
