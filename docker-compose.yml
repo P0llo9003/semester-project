@@ -1,0 +1,52 @@
+x-common-env: &common-env
+  SECRET: "esta_es_mi_compleja_clave_secreta"
+
+services:
+
+  api-gateway:
+    build: ./api-gateway
+    ports:
+      - "9090:9090"
+    environment:
+      <<: *common-env
+    depends_on:
+      - cines-service
+      - funciones-service
+      - peliculas-service
+      - salas-service
+      - usuarios-service
+
+  usuarios-service:
+    build: ./usuarios-service
+    ports:
+      - "9091:9091"
+    environment:
+      <<: *common-env
+
+  peliculas-service:
+    build: ./peliculas-service
+    ports:
+      - "9092:9092"
+    environment:
+      <<: *common-env
+
+  cines-service:
+    build: ./cines-service
+    ports:
+      - "9093:9093"
+    environment:
+      <<: *common-env
+
+  salas-service:
+    build: ./salas-service
+    ports:
+      - "9094:9094"
+    environment:
+      <<: *common-env
+
+  funciones-service:
+    build: ./funciones-service
+    ports:
+      - "9095:9095"
+    environment:
+      <<: *common-env
