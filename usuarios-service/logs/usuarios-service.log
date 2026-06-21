@@ -1,26 +1,52 @@
-19:56:48 INFO  Starting UsuariosServiceApplication using Java 21.0.3 with PID 60296 (C:\Users\Usuario\Desktop\semester-project\usuarios-service\target\classes started by Usuario in C:\Users\Usuario\Desktop\semester-project\usuarios-service)
-19:56:48 INFO  No active profile set, falling back to 1 default profile: "default"
-19:56:48 INFO  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-19:56:48 INFO  For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-19:56:48 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-19:56:48 INFO  Finished Spring Data repository scanning in 23 ms. Found 1 JPA repository interface.
-19:56:48 INFO  Tomcat initialized with port 9091 (http)
-19:56:48 INFO  Starting service [Tomcat]
-19:56:48 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
-19:56:48 INFO  Root WebApplicationContext: initialization completed in 607 ms
-19:56:49 INFO  HikariPool-1 - Starting...
-19:56:50 WARN  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'liquibase' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'liquibase' defined in class path resource [com/microservicio/usuarios_service/config/LiquibaseConfig.class]: liquibase.exception.DatabaseException: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-19:56:50 INFO  Stopping service [Tomcat]
-19:56:50 INFO  
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-19:56:50 ERROR Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'liquibase' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'liquibase' defined in class path resource [com/microservicio/usuarios_service/config/LiquibaseConfig.class]: liquibase.exception.DatabaseException: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+17:19:58 INFO  Starting UsuariosServiceApplication using Java 21.0.3 with PID 29856 (C:\Users\Usuario\Desktop\semester-project\usuarios-service\target\classes started by Usuario in C:\Users\Usuario\Desktop\semester-project\usuarios-service)
+17:19:58 INFO  No active profile set, falling back to 1 default profile: "default"
+17:19:58 INFO  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+17:19:58 INFO  For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+17:19:58 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+17:19:58 INFO  Finished Spring Data repository scanning in 65 ms. Found 1 JPA repository interface.
+17:19:59 INFO  Tomcat initialized with port 9091 (http)
+17:19:59 INFO  Starting service [Tomcat]
+17:19:59 INFO  Starting Servlet engine: [Apache Tomcat/11.0.20]
+17:19:59 INFO  Root WebApplicationContext: initialization completed in 806 ms
+17:19:59 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
+17:19:59 INFO  HHH000001: Hibernate ORM core version 7.2.7.Final
+17:19:59 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+17:19:59 INFO  HikariPool-1 - Starting...
+17:20:00 WARN  HHH000247: ErrorCode: 1130, SQLState: HY000
+17:20:00 WARN  CLI-specific condition,  message from server: "Host 'host.docker.internal' is not allowed to connect to this MariaDB server"
+17:20:00 WARN  HHH100046: Could not obtain connection to query JDBC database metadata
+org.hibernate.exception.GenericJDBCException: Unable to obtain isolated JDBC connection [CLI-specific condition,  message from server: "Host 'host.docker.internal' is not allowed to connect to this MariaDB server"] [n/a]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:39)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:101)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:51)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:366)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironment(JdbcEnvironmentInitiator.java:143)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:120)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:80)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:133)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:260)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:235)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:212)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:251)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:203)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:172)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1392)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1472)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1454)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
 	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977)
 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
@@ -34,40 +60,9 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [com/microservicio/usuarios_service/config/LiquibaseConfig.class]: liquibase.exception.DatabaseException: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:309)
-	... 13 common frames omitted
-Caused by: liquibase.exception.LiquibaseException: liquibase.exception.DatabaseException: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:289)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813)
-	... 20 common frames omitted
-Caused by: liquibase.exception.DatabaseException: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:281)
-	at liquibase.Scope.lambda$child$0(Scope.java:241)
-	at liquibase.Scope.child(Scope.java:250)
-	at liquibase.Scope.child(Scope.java:240)
-	at liquibase.Scope.child(Scope.java:219)
-	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:272)
-	... 22 common frames omitted
-Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
+Caused by: java.sql.SQLException: CLI-specific condition,  message from server: "Host 'host.docker.internal' is not allowed to connect to this MariaDB server"
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
 	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
 	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
 	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
@@ -79,127 +74,64 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576)
 	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97)
 	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
-	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:276)
-	... 27 common frames omitted
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+	at org.hibernate.engine.jdbc.connections.internal.DataSourceConnectionProvider.getConnection(DataSourceConnectionProvider.java:137)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:508)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:48)
+	... 40 common frames omitted
+17:20:00 ERROR Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+17:20:00 WARN  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+17:20:00 INFO  Stopping service [Tomcat]
+17:20:00 INFO  
 
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
-	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
-	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
-	at com.mysql.cj.NativeSession.connect(NativeSession.java:142)
-	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:964)
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
-	... 38 common frames omitted
-Caused by: java.net.ConnectException: Connection refused: getsockopt
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
-	at java.base/java.net.Socket.connect(Socket.java:751)
-	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
-	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
-	... 41 common frames omitted
-19:57:39 INFO  Starting UsuariosServiceApplication using Java 21.0.3 with PID 36020 (C:\Users\Usuario\Desktop\semester-project\usuarios-service\target\classes started by Usuario in C:\Users\Usuario\Desktop\semester-project\usuarios-service)
-19:57:39 INFO  No active profile set, falling back to 1 default profile: "default"
-19:57:39 INFO  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-19:57:39 INFO  For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-19:57:39 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-19:57:39 INFO  Finished Spring Data repository scanning in 28 ms. Found 1 JPA repository interface.
-19:57:40 INFO  Tomcat initialized with port 9091 (http)
-19:57:40 INFO  Starting service [Tomcat]
-19:57:40 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
-19:57:40 INFO  Root WebApplicationContext: initialization completed in 613 ms
-19:57:40 INFO  HikariPool-1 - Starting...
-19:57:40 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@bacb51f
-19:57:40 INFO  HikariPool-1 - Start completed.
-19:57:42 INFO  Reading from bd_usuarios.databasechangelog
-19:57:42 INFO  Database is up to date, no changesets to execute
-19:57:42 INFO  Reading from bd_usuarios.databasechangelog
-19:57:42 INFO  UPDATE SUMMARY
-19:57:42 INFO  Run:                          0
-19:57:42 INFO  Previously run:               2
-19:57:42 INFO  Filtered out:                 0
-19:57:42 INFO  -------------------------------
-19:57:42 INFO  Total change sets:            2
-19:57:42 INFO  Update summary generated
-19:57:42 INFO  Command execution complete
-19:57:42 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
-19:57:42 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
-19:57:42 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
-19:57:42 WARN  HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-19:57:42 INFO  HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/bd_usuarios?createDatabaseIfNotExist=true]
-	Database driver: MySQL Connector/J
-	Database dialect: MySQLDialect
-	Database version: 5.5.5
-	Default catalog/schema: bd_usuarios/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-19:57:43 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-19:57:43 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
-19:57:43 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
-19:57:43 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-19:57:43 INFO  Tomcat started on port 9091 (http) with context path '/'
-19:57:43 INFO  Started UsuariosServiceApplication in 4.28 seconds (process running for 4.525)
-20:57:10 INFO  Starting UsuariosServiceApplication using Java 21.0.3 with PID 29280 (C:\Users\Usuario\Desktop\semester-project\usuarios-service\target\classes started by Usuario in C:\Users\Usuario\Desktop\semester-project\usuarios-service)
-20:57:10 INFO  No active profile set, falling back to 1 default profile: "default"
-20:57:10 INFO  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-20:57:10 INFO  For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-20:57:10 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-20:57:10 INFO  Finished Spring Data repository scanning in 23 ms. Found 1 JPA repository interface.
-20:57:10 INFO  Tomcat initialized with port 9091 (http)
-20:57:10 INFO  Starting service [Tomcat]
-20:57:10 INFO  Starting Servlet engine: [Apache Tomcat/11.0.21]
-20:57:10 INFO  Root WebApplicationContext: initialization completed in 640 ms
-20:57:11 INFO  HikariPool-1 - Starting...
-20:57:11 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1ab5717f
-20:57:11 INFO  HikariPool-1 - Start completed.
-20:57:13 INFO  Reading from bd_usuarios.databasechangelog
-20:57:13 INFO  Database is up to date, no changesets to execute
-20:57:13 INFO  Reading from bd_usuarios.databasechangelog
-20:57:13 INFO  UPDATE SUMMARY
-20:57:13 INFO  Run:                          0
-20:57:13 INFO  Previously run:               2
-20:57:13 INFO  Filtered out:                 0
-20:57:13 INFO  -------------------------------
-20:57:13 INFO  Total change sets:            2
-20:57:13 INFO  Update summary generated
-20:57:13 INFO  Command execution complete
-20:57:13 INFO  HHH008540: Processing PersistenceUnitInfo [name: default]
-20:57:13 INFO  HHH000001: Hibernate ORM core version 7.2.12.Final
-20:57:13 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
-20:57:13 WARN  HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-20:57:13 INFO  HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/bd_usuarios?createDatabaseIfNotExist=true]
-	Database driver: MySQL Connector/J
-	Database dialect: MySQLDialect
-	Database version: 5.5.5
-	Default catalog/schema: bd_usuarios/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-20:57:14 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-20:57:14 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
-20:57:14 INFO  Hibernate is in classpath; If applicable, HQL parser will be used.
-20:57:14 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-20:57:14 INFO  Tomcat started on port 9091 (http) with context path '/'
-20:57:14 INFO  Started UsuariosServiceApplication in 4.374 seconds (process running for 4.635)
-20:57:43 INFO  Initializing Spring DispatcherServlet 'dispatcherServlet'
-20:57:43 INFO  Initializing Servlet 'dispatcherServlet'
-20:57:43 INFO  Completed initialization in 1 ms
-20:57:43 INFO  GET /usuarios
-20:57:43 INFO  Listando todos los usuarios
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+17:20:00 ERROR Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at com.microservicio.usuarios_service.UsuariosServiceApplication.main(UsuariosServiceApplication.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52)
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:273)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:235)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:212)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:251)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:203)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:172)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1392)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1472)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1454)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813)
+	... 18 common frames omitted
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:190)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:86)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:200)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:452)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironment(JdbcEnvironmentInitiator.java:143)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:120)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:80)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:133)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:260)
+	... 34 common frames omitted
