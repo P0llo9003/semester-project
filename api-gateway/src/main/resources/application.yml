@@ -7,29 +7,31 @@ spring:
 
   cloud:
     gateway:
-      routes:
+      server:
+        webflux:
+          routes:
 
-        - id: usuarios-service
-          uri: http://usuarios-service:9091
-          predicates:
-            - Path=/usuarios/**
+            - id: usuarios-service
+              uri: http://usuarios-service:9091
+              predicates:
+                - Path=/usuarios/**
 
-        - id: peliculas-service
-          uri: http://peliculas-service:9092
-          predicates:
-            - Path=/peliculas/**
+            - id: peliculas-service
+              uri: http://peliculas-service:9092
+              predicates:
+                - Path=/peliculas/**
 
-        - id: cines-service
-          uri: http://cines-service:9093
-          predicates:
-            - Path=/cines/**
+            - id: cines-service
+              uri: http://cines-service:9093
+              predicates:
+                - Path=/cines/**
 
-        - id: salas-service
-          uri: http://salas-service:9094
-          predicates:
-            - Path=/salas/**
+            - id: salas-service
+              uri: http://salas-service:9094
+              predicates:
+                - Path=/salas/**
 
-        - id: funciones-service
-          uri: http://funciones-service:9095
-          predicates:
-            - Path=/funciones/**,/entradas/**
+            - id: funciones-service
+              uri: http://funciones-service:9095
+              predicates:
+                - Path=/funciones/**,/entradas/**
