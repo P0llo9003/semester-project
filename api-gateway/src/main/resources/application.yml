@@ -35,3 +35,8 @@ spring:
               uri: http://funciones-service:9095
               predicates:
                 - Path=/funciones/**,/entradas/**
+
+            - id: confiteria-service
+              uri: http://confiteria-service:9060
+              predicates:
+                - Path=/confiteria/**

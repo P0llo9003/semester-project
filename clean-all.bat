@@ -15,3 +15,6 @@ call .\mvnw clean
 
 cd ../usuarios-service
 call .\mvnw clean
+
+cd ../confiteria-service
+call .\mvnw clean 

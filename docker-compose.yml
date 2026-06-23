@@ -50,3 +50,10 @@ services:
       - "9095:9095"
     environment:
       <<: *common-env
+
+  confiteria-service:
+    build: ./confiteria-service
+    ports:
+      - "9060:9060"
+    environment:
+      <<: *common-env

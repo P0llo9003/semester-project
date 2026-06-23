@@ -19,3 +19,6 @@ call .\mvnw clean package -DskipTests
 
 cd ../usuarios-service
 call .\mvnw clean package -DskipTests
+
+cd ../confiteria-service
+call .\mvnw clean package -DskipTests
