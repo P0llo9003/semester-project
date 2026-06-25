@@ -15,8 +15,6 @@ public interface FuncionRepository extends JpaRepository<Funcion, Long>{
 
     List<Funcion> findBySalaId(Long salaId);
 
-    List<Funcion> findByPrecio(int precio);
-
     List<Funcion> findByFecha(LocalDate fecha);
 
 }

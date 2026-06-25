@@ -87,7 +87,6 @@ class FuncionServiceTest {
                                 1L,
                                 LocalDate.now(),
                                 LocalTime.of(20, 0),
-                                5000.0,
                                 "ACTIVA")));
 
         List<Funcion> funciones = funcionService.findAll();
@@ -110,7 +109,6 @@ class FuncionServiceTest {
                         1L,
                         LocalDate.now(),
                         LocalTime.of(20, 0),
-                        5000.0,
                         "ACTIVA");
 
         when(funcionRepository.findById(id))
@@ -136,7 +134,6 @@ class FuncionServiceTest {
                         1L,
                         LocalDate.now(),
                         LocalTime.of(20, 0),
-                        5000.0,
                         "ACTIVA");
 
         when(funcionRepository.save(any(Funcion.class)))
@@ -145,7 +142,6 @@ class FuncionServiceTest {
         Funcion resultado = funcionService.save(funcion);
 
         assertNotNull(resultado);
-        assertEquals(5000.0, resultado.getPrecio());
 
         verify(funcionRepository).save(any(Funcion.class));
     }
@@ -164,7 +160,6 @@ class FuncionServiceTest {
                         1L,
                         LocalDate.now(),
                         LocalTime.of(20, 0),
-                        5000.0,
                         "ACTIVA");
 
         Funcion cambios =
@@ -174,7 +169,6 @@ class FuncionServiceTest {
                         2L,
                         LocalDate.now().plusDays(1),
                         LocalTime.of(22, 0),
-                        6000.0,
                         "MODIFICADA");
 
         when(funcionRepository.findById(id))
@@ -186,7 +180,6 @@ class FuncionServiceTest {
         Funcion resultado = funcionService.update(id, cambios);
 
         assertNotNull(resultado);
-        assertEquals(6000.0, resultado.getPrecio());
         assertEquals("MODIFICADA", resultado.getEstado());
 
         verify(funcionRepository).findById(id);

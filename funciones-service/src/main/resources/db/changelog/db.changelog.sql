@@ -7,23 +7,22 @@ CREATE TABLE funcion (
     sala_id BIGINT,
     fecha DATE,
     hora TIME,
-    precio DOUBLE,
     estado VARCHAR(255)
 );
 
 
 --changeset seba:2
-INSERT INTO funcion (pelicula_id, sala_id, fecha, hora, precio, estado) VALUES
-(1, 1, '2026-05-26', '15:00:00', 4500, 'ACTIVA'),
-(2, 2, '2026-05-26', '18:30:00', 6000, 'ACTIVA'),
-(3, 3, '2026-05-27', '20:00:00', 7500, 'ACTIVA'),
-(4, 4, '2026-05-27', '22:15:00', 8500, 'ACTIVA'),
-(5, 5, '2026-05-28', '14:45:00', 5000, 'ACTIVA'),
-(1, 6, '2026-05-28', '17:00:00', 6500, 'CANCELADA'),
-(2, 7, '2026-05-29', '19:30:00', 7000, 'ACTIVA'),
-(3, 8, '2026-05-29', '21:45:00', 9000, 'ACTIVA'),
-(4, 9, '2026-05-30', '16:20:00', 5500, 'ACTIVA'),
-(5, 10, '2026-05-30', '23:00:00', 10000, 'AGOTADA');
+INSERT INTO funcion (pelicula_id, sala_id, fecha, hora, estado) VALUES
+(1, 1, '2026-05-26', '15:00:00', 'ACTIVA'),
+(2, 2, '2026-05-26', '18:30:00', 'ACTIVA'),
+(3, 3, '2026-05-27', '20:00:00', 'ACTIVA'),
+(4, 4, '2026-05-27', '22:15:00', 'ACTIVA'),
+(5, 5, '2026-05-28', '14:45:00', 'ACTIVA'),
+(1, 6, '2026-05-28', '17:00:00', 'CANCELADA'),
+(2, 7, '2026-05-29', '19:30:00', 'ACTIVA'),
+(3, 8, '2026-05-29', '21:45:00', 'ACTIVA'),
+(4, 9, '2026-05-30', '16:20:00', 'ACTIVA'),
+(5, 10, '2026-05-30', '23:00:00', 'AGOTADA');
 
 
 --changeset seba:3

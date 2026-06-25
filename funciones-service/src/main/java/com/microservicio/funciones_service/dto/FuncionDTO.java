@@ -20,15 +20,14 @@ public class FuncionDTO {
     private Long salaId;
     private LocalDate fecha;
     private LocalTime hora;
-    private Double precio;
     private String estado;
 
     public Funcion toModel() {
-        return new Funcion(id,peliculaId,salaId,fecha,hora,precio,estado);
+        return new Funcion(id,peliculaId,salaId,fecha,hora,estado);
     }
 
     public static FuncionDTO fromModel(Funcion f) {
         if (f == null) return null;
-        return new FuncionDTO(f.getId(),f.getPeliculaId(),f.getSalaId(),f.getFecha(),f.getHora(),f.getPrecio(),f.getEstado());
+        return new FuncionDTO(f.getId(),f.getPeliculaId(),f.getSalaId(),f.getFecha(),f.getHora(),f.getEstado());
     }
 }

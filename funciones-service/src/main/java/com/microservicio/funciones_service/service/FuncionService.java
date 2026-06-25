@@ -58,12 +58,6 @@ public class FuncionService {
     }
 
 
-    public List<Funcion> findByPrecio(int precio) {
-        logger.info("Buscando funcion por precio={}", precio);
-        return funcionRepository.findByPrecio(precio);
-    }
-
-
     public List<Funcion> findByFecha(LocalDate fecha) {
         logger.info("Buscan funcion por fecha={}", fecha);
         return funcionRepository.findByFecha(fecha);
@@ -113,7 +107,6 @@ public class FuncionService {
         existingFuncion.setSalaId(updatedFuncion.getSalaId());
         existingFuncion.setFecha(updatedFuncion.getFecha());
         existingFuncion.setHora(updatedFuncion.getHora());
-        existingFuncion.setPrecio(updatedFuncion.getPrecio());
         existingFuncion.setEstado(updatedFuncion.getEstado());
 
         Funcion savedFuncion = funcionRepository.save(existingFuncion);

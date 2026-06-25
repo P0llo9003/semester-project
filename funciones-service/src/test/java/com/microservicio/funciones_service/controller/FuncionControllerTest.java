@@ -54,7 +54,6 @@ public class FuncionControllerTest {
                         1L,
                         LocalDate.of(2026, 6, 22),
                         LocalTime.of(20, 0),
-                        5000.0,
                         "ACTIVA");
 
         funcionDTO = FuncionDTO.fromModel(funcion);
@@ -88,8 +87,7 @@ public class FuncionControllerTest {
 
         mockMvc.perform(get("/funciones/1"))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.id").value(1))
-                .andExpect(jsonPath("$.precio").value(5000.0));
+                .andExpect(jsonPath("$.id").value(1));
     }
 
     @Test
