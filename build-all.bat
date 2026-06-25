@@ -22,3 +22,6 @@ call .\mvnw clean package -DskipTests
 
 cd ../confiteria-service
 call .\mvnw clean package -DskipTests
+
+cd ../pago-service
+call .\mvnw clean package -DskipTests

@@ -18,3 +18,6 @@ call .\mvnw clean
 
 cd ../confiteria-service
 call .\mvnw clean 
+
+cd ../pago-service
+call .\mvnw clean 

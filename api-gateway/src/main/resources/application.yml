@@ -40,3 +40,8 @@ spring:
               uri: http://confiteria-service:9060
               predicates:
                 - Path=/confiteria/**
+
+            - id: pago-service
+              uri: http://pago-service:9097
+              predicates:
+                - Path=/pagos/**

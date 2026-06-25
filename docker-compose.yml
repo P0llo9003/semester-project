@@ -57,3 +57,10 @@ services:
       - "9060:9060"
     environment:
       <<: *common-env
+
+  pago-service:
+    build: ./pago-service
+    ports:
+      - "9097:9097"
+    environment:
+      <<: *common-env
