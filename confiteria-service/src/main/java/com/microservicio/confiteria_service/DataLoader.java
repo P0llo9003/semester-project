@@ -22,7 +22,7 @@ public class DataLoader implements CommandLineRunner {
     public void run(String... args) throws Exception {
         Faker faker = new Faker();
         Random random = new Random();
-        // Generar confiterias
+    
         for (int i = 0; i < 10; i++) {
             Confiteria confi = new Confiteria();
             confi.setNombre(faker.options().option("Cabritas Pequeñas","Cabritas Medianas", "Cabritas Grandes", "Bebida mediana"));

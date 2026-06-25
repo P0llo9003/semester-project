@@ -128,4 +128,16 @@ public class EntradaController {
 
         return ResponseEntity.noContent().build();
     }
+
+
+
+    @GetMapping("/{id}/exists")
+    public ResponseEntity<Boolean> existsById(@PathVariable Long id) {
+
+        logger.info("GET /entradas/{}/exists", id);
+
+        return ResponseEntity.ok(entradaService.existsById(id));
+    }
+
+
 }

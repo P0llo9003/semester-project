@@ -6,6 +6,7 @@ import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -168,4 +169,17 @@ class EntradaServiceTest {
 
         verify(entradaRepository).deleteById(id);
     }
+
+    @Test
+    void testExistsById() {
+
+        when(entradaRepository.existsById(1L))
+                .thenReturn(true);
+
+        Boolean existe = entradaService.existsById(1L);
+
+        assertTrue(existe);
+
+        verify(entradaRepository).existsById(1L);
+    }    
 }

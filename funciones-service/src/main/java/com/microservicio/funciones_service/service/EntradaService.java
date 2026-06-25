@@ -202,6 +202,10 @@ public class EntradaService {
 
 
 
+    public Boolean existsById(Long id) {
 
-    
+        logger.info("Verificando existencia de entrada id={}", id);
+        return entradaRepository.existsById(id);
+    }    
+
 }

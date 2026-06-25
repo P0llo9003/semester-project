@@ -19,6 +19,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
@@ -140,4 +141,15 @@ public class EntradaControllerTest {
         verify(entradaService, times(1))
                 .delete(1L);
     }
+
+    @Test
+    void testExistsById() throws Exception {
+
+        when(entradaService.existsById(1L))
+                .thenReturn(true);
+
+        mockMvc.perform(get("/entradas/1/exists"))
+                .andExpect(status().isOk())
+                .andExpect(content().string("true"));
+    }    
 }
