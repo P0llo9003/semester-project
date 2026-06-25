@@ -143,6 +143,18 @@ public class EntradaControllerTest {
     }
 
     @Test
+    void testTotalEntradas() throws Exception {
+
+    when(entradaService.totalEntradas())
+            .thenReturn(15L);
+
+    mockMvc.perform(get("/entradas/total"))
+            .andExpect(status().isOk())
+            .andExpect(content().string("15"));
+    }
+
+
+    @Test
     void testExistsById() throws Exception {
 
         when(entradaService.existsById(1L))

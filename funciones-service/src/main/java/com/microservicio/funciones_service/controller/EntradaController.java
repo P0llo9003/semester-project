@@ -129,6 +129,14 @@ public class EntradaController {
         return ResponseEntity.noContent().build();
     }
 
+    @GetMapping("/total")
+    public ResponseEntity<Long> totalEntradas() {
+
+    logger.info("GET /entradas/total");
+
+    return ResponseEntity.ok(entradaService.totalEntradas());
+}
+
 
 
     @GetMapping("/{id}/exists")

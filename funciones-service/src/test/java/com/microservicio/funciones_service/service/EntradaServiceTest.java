@@ -170,6 +170,21 @@ class EntradaServiceTest {
         verify(entradaRepository).deleteById(id);
     }
 
+
+        @Test
+        void testTotalEntradas() {
+
+        when(entradaRepository.count())
+                .thenReturn(15L);
+
+        Long total = entradaService.totalEntradas();
+
+        assertNotNull(total);
+        assertEquals(15L, total);
+
+        verify(entradaRepository).count();
+        }
+
     @Test
     void testExistsById() {
 

@@ -116,6 +116,17 @@ public class EntradaService {
     }
 
 
+    public Long totalEntradas() {
+
+    logger.info("Obteniendo total de entradas");
+    Long total = entradaRepository.count();
+
+    logger.debug("Total de entradas: {}", total);
+
+    return total;
+    }
+
+
     // VALIDACIONES
     private void validateUsuarioAndFuncion(
             Long usuarioId,
@@ -198,7 +209,6 @@ public class EntradaService {
             throw new RuntimeException("Funcion no encontrada");
         }
     }
-
 
 
 
