@@ -25,3 +25,13 @@ call .\mvnw clean package -DskipTests
 
 cd ../pago-service
 call .\mvnw clean package -DskipTests
+
+cd ../fidelizacion-service
+call .\mvnw clean package -DskipTests
+
+cd ../notificacion-service
+call .\mvnw clean package -DskipTests
+
+cd ../empleados-service
+call .\mvnw clean package -DskipTests
+

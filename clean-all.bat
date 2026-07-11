@@ -21,3 +21,13 @@ call .\mvnw clean
 
 cd ../pago-service
 call .\mvnw clean 
+
+cd ../fidelizacion-service
+call .\mvnw clean
+
+cd ../notificacion-service
+call .\mvnw clean
+
+cd ../empleados-service
+call .\mvnw clean
+

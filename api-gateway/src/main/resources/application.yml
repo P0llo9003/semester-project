@@ -36,6 +36,21 @@ spring:
               predicates:
                 - Path=/funciones/**,/entradas/**
 
+            - id: fidelizacion-service
+              uri: http://fidelizacion-service:9096
+              predicates:
+                - Path=/fidelizaciones/**
+
+            - id: notificacion-service
+              uri: http://notificacion-service:9098
+              predicates:
+                - Path=/notificaciones/**
+
+            - id: empleados-service
+              uri: http://empleados-service:9099
+              predicates:
+                - Path=/empleados/**
+
             - id: confiteria-service
               uri: http://confiteria-service:9060
               predicates:

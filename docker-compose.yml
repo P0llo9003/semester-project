@@ -15,6 +15,9 @@ services:
       - peliculas-service
       - salas-service
       - usuarios-service
+      - fidelizacion-service
+      - notificacion-service
+      - empleados-service
 
   usuarios-service:
     build: ./usuarios-service
@@ -48,6 +51,27 @@ services:
     build: ./funciones-service
     ports:
       - "9095:9095"
+    environment:
+      <<: *common-env
+
+  fidelizacion-service:
+    build: ./fidelizacion-service
+    ports:
+      - "9096:9096"
+    environment:
+      <<: *common-env
+
+  notificacion-service:
+    build: ./notificacion-service
+    ports:
+      - "9098:9098"
+    environment:
+      <<: *common-env
+
+  empleados-service:
+    build: ./empleados-service
+    ports:
+      - "9099:9099"
     environment:
       <<: *common-env
 

@@ -74,6 +74,15 @@ http://localhost:9060/doc/swagger-ui/index.html#/
 Pago Service:
 http://localhost:9097/doc/swagger-ui/index.html#/
 
+Fidelización Service:
+http://localhost:9096/swagger-ui/index.html
+
+Notificación Service:
+http://localhost:9098/swagger-ui/index.html
+
+Empleados Service:
+http://localhost:9099/swagger-ui/index.html
+
 
 ## Consideraciones
 
