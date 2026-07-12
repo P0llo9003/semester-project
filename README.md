@@ -7,15 +7,19 @@ Proyecto desarrollado bajo una arquitectura de microservicios para la administra
 
 ## Lista de Microservicios
 
-| Microservicio     | Puerto  |
-|-------------------|---------|
-| usuarios-service  | 9091    |
-| peliculas-service | 9092    |
-| cines-service     | 9093    |
-| salas-service     | 9094    |
-| funciones-service | 9095    |
-| confiteria-service| 9060    |
-| pago-service      | 9097    |
+| Microservicio        | Puerto  |
+|----------------------|---------|
+| usuarios-service     | 9091    |
+| peliculas-service    | 9092    |
+| cines-service        | 9093    |
+| salas-service        | 9094    |
+| funciones-service    | 9095    |
+| fidelizacion-service | 9096    |
+| pago-service         | 9097    |
+| notificacion-service | 9098    |
+| empleados-service    | 9099    |
+| confiteria-service   | 9060    |
+
 
 
 
@@ -36,8 +40,11 @@ Proyecto desarrollado bajo una arquitectura de microservicios para la administra
 - /salas
 - /funciones
 - /entradas
-- /confiteria
+- /fidelizaciones
 - /pagos
+- /notificaciones
+- /empleados
+- /confiteria
 
 
 
@@ -68,20 +75,20 @@ http://localhost:9094/doc/swagger-ui/index.html#/
 Funciones Service:
 http://localhost:9095/doc/swagger-ui/index.html#/
 
-Confiteria Service:
-http://localhost:9060/doc/swagger-ui/index.html#/
+Fidelización Service:
+http://localhost:9096/swagger-ui/index.html
 
 Pago Service:
 http://localhost:9097/doc/swagger-ui/index.html#/
-
-Fidelización Service:
-http://localhost:9096/swagger-ui/index.html
 
 Notificación Service:
 http://localhost:9098/swagger-ui/index.html
 
 Empleados Service:
 http://localhost:9099/swagger-ui/index.html
+
+Confiteria Service:
+http://localhost:9060/doc/swagger-ui/index.html#/
 
 
 ## Consideraciones
